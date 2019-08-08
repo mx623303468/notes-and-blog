@@ -83,12 +83,12 @@
 
 ## BEM
 
-    Block  块
-      header container content menu
-    Element  元素
-      menu-item, list-item, head-title
-    Modifier  修饰符
-      checked, disabled, highlighted, fixed, size-big, color-red
+Block 块  
+ header container content menu  
+Element 元素  
+ menu-item, list-item, head-title  
+Modifier 修饰符  
+ checked, disabled, highlighted, fixed, size-big, color-red
 
 ```html
 <!-- 无状态按钮 -->

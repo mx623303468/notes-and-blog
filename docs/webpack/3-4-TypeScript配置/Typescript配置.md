@@ -84,7 +84,7 @@ touCat({
 })
 ```
 
-```
+```shell
 PS D:\notes\webpack学习笔记\3-4-TypeScript配置\demo> webpack
 Hash: 14b1bc2efdce45993f3b
 Version: webpack 4.26.1

@@ -7,10 +7,11 @@
 语法大部分还是延续了 HTML 的语法，不同之处在于 文档开头的声明。  
 改变为：
 
-```
+```html
 <!DOCTYPE html>
-  <html lang="zh-CN">
-  <meta charset="utf-8">
+<html lang="zh-CN">
+  <meta charset="utf-8" />
+</html>
 ```
 
 - 字符编码变的简洁

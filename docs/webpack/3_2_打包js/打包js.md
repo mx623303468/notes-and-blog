@@ -4,7 +4,7 @@
 
 要安装最新版本或者特定版本，请运行一下命令：
 
-```
+```shell
   npm install webpack --save-dev
   npm install webpack@<version> --save-dev
 ```
@@ -13,7 +13,7 @@
 
 `app.js :`
 
-```
+```js
 // es module
 import sum from './sum'
 
@@ -21,7 +21,7 @@ import sum from './sum'
 const minus = require('./minus')
 
 // amd
-require(['./muti'], function (muti) {
+require(['./muti'], function(muti) {
   console.log('muti(23, 24) = ', muti(23, 24))
 })
 
@@ -31,7 +31,7 @@ console.log('minus(23, 24) = ', minus(23, 24))
 
 `sum.js:`
 
-```
+```js
 // es module
 export default (x, y) => {
   return x + y
@@ -40,40 +40,39 @@ export default (x, y) => {
 
 `minus.js:`
 
-```
+```js
 // commonjs
 module.exports = (x, y) => {
   return x * y
 }
-
 ```
 
 `muti.js:`
 
-```
+```js
 // amd
 define(function(require, factory) {
-  'use strict';
-  return function (a, b) {
+  'use strict'
+  return function(a, b) {
     return a * b
   }
-});
+})
 ```
 
 `index.html:`  
 我们把`bundle.js`作为出口文件，所以引入 `bundle.js`
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-</head>
-<body>
-  // 引入 bundle.js
-  <script src="./bundle.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    // 引入 bundle.js
+    <script src="./bundle.js"></script>
+  </body>
 </html>
 ```
 

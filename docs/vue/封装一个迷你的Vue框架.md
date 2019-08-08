@@ -163,8 +163,6 @@
     toArray(likeArray) {
       return [].slice.call(likeArray)
     }
-  ```
-
 
     /**
     * 是否是元素节点
@@ -190,9 +188,5 @@
     isDirective(attrName) {
       return attrName.startsWith('v-')
     }
-
-}
-
-```
-
-```
+  }
+  ```

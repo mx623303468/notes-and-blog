@@ -10,7 +10,10 @@ npm run build
 cd docs/.vuepress/dist
 
 # 如果是发布到自定义域名
-echo 'ylovey.top\nwww.ylovey.top' > CNAME
+cat>CNAME<<EOF
+ylovey.top
+www.ylovey.top
+EOF
 
 git init
 git add -A

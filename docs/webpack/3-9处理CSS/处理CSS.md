@@ -13,13 +13,13 @@
 
 - 在 `webpack.config.js` 配置文件中，在 `module` 中添加 。
 
-  - ```
-    module: {
-        rules: [
-          {
-            test: /\.css$/,
-            use: ['style-loader','css-loader']
-          }
-        ]
+  ```js
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
       }
-    ```
+    ]
+  }
+  ```
