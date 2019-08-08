@@ -50,6 +50,7 @@ module.exports = {
     '@vuepress/back-to-top': {}
   },
   themeConfig: {
+    sidebarDepth: 2,
     nav: [
       {
         text: 'Notes',
