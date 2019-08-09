@@ -155,6 +155,59 @@ module.exports = [
 
 - `[contenthash]` 在使用 chunkhash 会存在一个问题，当一个 JS 文件中引入了 CSS 文件， 编译后它们的 hash 是相同的。只要 JS 文件内容发生变化，再次编译后，hash 就会发生变化。而与之关联的，没有任何改变 CSS 文件的 hash 也会发生改变。针对这种情况，可以把 CSS 从 JS 中使用 `mini-css-extract-plugin` 或者 `extract-text-webpack-plugin` 抽离出来并使用 contenthash
 
+- 目前支持的占位符
+
+  | 占位符        | 含义                                         |
+  | ------------- | -------------------------------------------- |
+  | `[hash]`      | 模块标识符的hash                             |
+  | `[chunkhash]` | chunk 内容的hash                             |
+  | `[name]`      | 模块名称会取文件名                           |
+  | `[id]`        | 模块标识符                                   |
+  | `[query]`     | 模块的 query ,例如文件名？后面的字符串       |
+  | `[function]`  | 一个return出一个 string 作为 filename 的函数 |
+
+  
+
 ## Webpack 的 SourceMap 有几种形式？ 分别有什么特点？ SourceMap 配置的最佳实践是什么？
 
+| devtool                        | 构建速度 | 重新构建速度 | 生产环境 | 品质(quality)          |
+| :----------------------------- | :------- | :----------- | :------- | :--------------------- |
+| 留空，none                     | +++      | +++          | yes      | 打包后的代码           |
+| eval                           | +++      | +++          | no       | 生成后的代码           |
+| cheap-eval-source-map          | +        | ++           | no       | 转换过的代码（仅限行） |
+| cheap-module-eval-source-map   | o        | ++           | no       | 原始源代码（仅限行）   |
+| eval-source-map                | –        | +            | no       | 原始源代码             |
+| cheap-source-map               | +        | o            | no       | 转换过的代码（仅限行） |
+| cheap-module-source-map        | o        | -            | no       | 原始源代码（仅限行）   |
+| inline-cheap-source-map        | +        | o            | no       | 转换过的代码（仅限行） |
+| inline-cheap-module-source-map | o        | -            | no       | 原始源代码（仅限行）   |
+| source-map                     | –        | –            | yes      | 原始源代码             |
+| inline-source-map              | –        | –            | no       | 原始源代码             |
+| hidden-source-map              | –        | –            | yes      | 原始源代码             |
+| nosources-source-map           | –        | –            | yes      | 无源代码内容           |
+
+> `+++` 非常快速, `++` 快速, `+` 比较快, `o` 中等, `-` 比较慢, `--` 慢  
+
+**一般在实际项目中，推荐生产环境不使用或者使用 source-map（如果有 Sentry 这类错误跟踪系统），开发环境使用`cheap-module-eval-source-map`。**
+
 ## 什么是 bundle ，什么是 chunk 什么是 module ？
+
+## 能不能手写一个 Webpack 配置？记住重点配置项：`entry`、`output`、`module.rules`（loader）和`plugin`。
+
+## 在 JS 文件中怎么调用 Loader 来处理一个模块？
+
+## Loader 的解析顺序是怎样的？
+
+## 什么是 JavaScript 的模块化开发？有哪些可以遵循的规范？
+
+## Webpack 中怎么获取一个模块引用另外一个模块是传入的 query？
+
+## 怎么实现 Webpack 的按需加载？什么是神奇注释？
+
+## Babel 的 preset-env 是什么？
+
+## 懂得 Babel 的原理吗？你会手写 Babel 插件吗？
+
+## Babel 怎么做 Polyfill，Polyfill 的最佳实践是什么？
+
+## Babel 怎么针对不同的浏览器打包不同的适配代码?
