@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>编译 ES6 7 | YinXiaobo 的笔记</title>
+    <meta name="description" content="">
+    <link rel="icon" type="image/x-icon" href="/favicon.jpg">
+    
+    <link rel="preload" href="/assets/css/0.styles.4671a259.css" as="style"><link rel="preload" href="/assets/js/app.f8335c6e.js" as="script"><link rel="preload" href="/assets/js/2.27e84395.js" as="script"><link rel="preload" href="/assets/js/30.82bf993e.js" as="script"><link rel="preload" href="/assets/js/3.58d7ffb3.js" as="script"><link rel="prefetch" href="/assets/js/10.d9f10bd3.js"><link rel="prefetch" href="/assets/js/11.c05bd5f1.js"><link rel="prefetch" href="/assets/js/12.2e5c439b.js"><link rel="prefetch" href="/assets/js/13.ef87c29b.js"><link rel="prefetch" href="/assets/js/14.d250937f.js"><link rel="prefetch" href="/assets/js/15.fbe4deb6.js"><link rel="prefetch" href="/assets/js/16.06d98802.js"><link rel="prefetch" href="/assets/js/17.3a4c52f8.js"><link rel="prefetch" href="/assets/js/18.be8493d5.js"><link rel="prefetch" href="/assets/js/19.be73989b.js"><link rel="prefetch" href="/assets/js/20.782ff0f7.js"><link rel="prefetch" href="/assets/js/21.e648a175.js"><link rel="prefetch" href="/assets/js/22.d1875ead.js"><link rel="prefetch" href="/assets/js/23.184bc0b6.js"><link rel="prefetch" href="/assets/js/24.7d813daf.js"><link rel="prefetch" href="/assets/js/25.431b535c.js"><link rel="prefetch" href="/assets/js/26.3ed2897a.js"><link rel="prefetch" href="/assets/js/27.3bfd2356.js"><link rel="prefetch" href="/assets/js/28.09a7e09a.js"><link rel="prefetch" href="/assets/js/29.10b4a3a4.js"><link rel="prefetch" href="/assets/js/31.dfbb50df.js"><link rel="prefetch" href="/assets/js/32.0ba33a57.js"><link rel="prefetch" href="/assets/js/33.e7d18a0f.js"><link rel="prefetch" href="/assets/js/34.cd78a2cc.js"><link rel="prefetch" href="/assets/js/4.3e8788b9.js"><link rel="prefetch" href="/assets/js/5.739d8270.js"><link rel="prefetch" href="/assets/js/6.a5a9fec4.js"><link rel="prefetch" href="/assets/js/7.8a4d27b3.js"><link rel="prefetch" href="/assets/js/8.0cf6aafe.js"><link rel="prefetch" href="/assets/js/9.b6542da3.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.4671a259.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">YinXiaobo 的笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Notes</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>基础</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/js/" class="nav-link">JavaScript</a></li><li class="dropdown-subitem"><a href="/html/" class="nav-link">HTML</a></li><li class="dropdown-subitem"><a href="/css/" class="nav-link">CSS</a></li></ul></li><li class="dropdown-item"><h4>构建工具</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/webpack/" class="nav-link router-link-active">Webpack</a></li></ul></li><li class="dropdown-item"><h4>框架</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/" class="nav-link">Vue</a></li><li class="dropdown-subitem"><a href="/react/" class="nav-link">React</a></li></ul></li><li class="dropdown-item"><h4>综合</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/sundry/" class="nav-link">杂项</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/good-article/" class="nav-link">好文收藏</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">一些项目</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/music.html" class="nav-link">music</a></li><li class="dropdown-item"><!----> <a href="/pro.html" class="nav-link">PRO</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Notes</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>基础</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/js/" class="nav-link">JavaScript</a></li><li class="dropdown-subitem"><a href="/html/" class="nav-link">HTML</a></li><li class="dropdown-subitem"><a href="/css/" class="nav-link">CSS</a></li></ul></li><li class="dropdown-item"><h4>构建工具</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/webpack/" class="nav-link router-link-active">Webpack</a></li></ul></li><li class="dropdown-item"><h4>框架</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/" class="nav-link">Vue</a></li><li class="dropdown-subitem"><a href="/react/" class="nav-link">React</a></li></ul></li><li class="dropdown-item"><h4>综合</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/sundry/" class="nav-link">杂项</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/good-article/" class="nav-link">好文收藏</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">一些项目</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/music.html" class="nav-link">music</a></li><li class="dropdown-item"><!----> <a href="/pro.html" class="nav-link">PRO</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/webpack/" class="sidebar-link">Webpack</a></li><li><a href="/webpack/webpack面试题.html" class="sidebar-link">webpack 相关面试题</a></li><li><a href="/webpack/1.什么是webpack.html" class="sidebar-link">Webpack 是什么</a></li><li><a href="/webpack/2.什么是模块打包工具.html" class="sidebar-link">什么是模块打包工具</a></li><li><a href="/webpack/3.webpack的安装.html" class="sidebar-link">Webpack 的安装</a></li><li><a href="/webpack/3_2_打包js/打包js.html" class="sidebar-link">webpack 起步 - 打包 JS 文件</a></li><li><a href="/webpack/3_3_编译ES6_7/编译ES6_7.html" class="active sidebar-link">编译 ES6 7</a></li><li><a href="/webpack/3-4-TypeScript配置/Typescript配置.html" class="sidebar-link">TypeScript 配置</a></li><li><a href="/webpack/3-5提取公共代码/提取公共代码.html" class="sidebar-link">使用 webpack 提取公共代码</a></li><li><a href="/webpack/3-6代码分割和懒加载/代码分割和懒加载.html" class="sidebar-link">代码分割 和 懒加载</a></li><li><a href="/webpack/3-9处理CSS/处理CSS.html" class="sidebar-link">处理 CSS</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="编译-es6-7"><a href="#编译-es6-7" aria-hidden="true" class="header-anchor">#</a> 编译 ES6 7</h1> <blockquote><p>webpack 4.x | babel-loader 8.x | babel 7.x<br> <code>npm install -D babel-loader @babel/core @babel/preset-env webpack</code></p></blockquote> <blockquote><p>webpack 4.x | babel-loader 7.x | babel 6.x<br> <code>npm install -D babel-loader@7 babel-core babel-preset-env webpack</code></p></blockquote> <p><strong>如果 babel-loader 是 8.0.0 之后的版本，需要安装指定版本的 @babel/core 与 @babel/preset-env</strong></p> <p><strong>在配置文件中，涉及的配置项使用，也需要改为 <code>@babel/preset-env</code>这种形式的</strong></p> <ul><li><p>需要安装的 loader <code>babel-loader</code></p> <ul><li>安装最新版的 <code>npm install babel-loader</code></li> <li>一般安装 <code>npm install --save-dev babel-loader babel-core</code></li></ul></li> <li><p>新建一个文件夹 <code>demo</code>，进入 <code>cd demo</code> ，然后初始化一下 <code>npm init -y</code>，完成后文件夹内会多一个 <code>package.json</code>和 <code>package-lock.json</code> 的配置文件。</p></li> <li><p>安装需要的 loader 按上述命令安装即可。</p></li> <li><p>安装完成后，在项目目录内创建 <code>app.js</code> <code>index.html</code> <code>webpack.config.js</code></p></li> <li><p>编辑 <code>webpack.config.js</code> 配置文件，增加入口 <code>entry</code> 与出口 <code>output</code></p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  entry<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    app<span class="token punctuation">:</span> <span class="token string">'./app.js'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  output<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    filename<span class="token punctuation">:</span> <span class="token string">'[name].[hash:5].js'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  module<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    rules<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        test<span class="token punctuation">:</span> <span class="token regex">/\.js$/</span><span class="token punctuation">,</span>
+        use<span class="token punctuation">:</span> <span class="token string">'babel-loader'</span><span class="token punctuation">,</span>
+        exclude<span class="token punctuation">:</span> <span class="token string">'/node_modules/'</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li></ul> <ul><li><p>此时还需要一个 <code>babel-presets</code> 规范的插件</p> <ul><li><code>npm install @babel/preset-env --save-dev</code> 如果 <code>babel-loader</code> 是安装的 8.x 版本，就使用这一句。</li> <li><code>npm install babel-preset-env --save-dev</code> 如果<code>babel-loader</code> 是安装的 7.x，就使用这一句。</li></ul></li></ul> <ul><li><p>安装完成后，我们需要给我们安装的 loader 指定一个 preset 。</p> <ul><li><p>修改 use</p> <div class="language-js extra-class"><pre class="language-js"><code>use<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  loader<span class="token punctuation">:</span> <span class="token string">'babel-loader'</span><span class="token punctuation">,</span>
+  options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    presets<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">[</span><span class="token string">'@babel/preset-env'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        targets<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          browsers<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'&gt; 1%'</span><span class="token punctuation">,</span> <span class="token string">'last 2 versions'</span><span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">]</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div></li></ul></li> <li><p>在 <code>app.js</code> 文件中添加一些东西，来打包编译一下。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> <span class="token function-variable function">func</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">const</span> <span class="token constant">NUM</span> <span class="token operator">=</span> <span class="token number">45</span>
+<span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span>
+<span class="token keyword">let</span> arrB <span class="token operator">=</span> arr<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">item</span> <span class="token operator">=&gt;</span> item <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">)</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'new Set(arrB)'</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span>arrB<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre></div></li> <li><p>运行 <code>webpack</code> 打包成功</p> <div class="language-shell extra-class"><pre class="language-text"><code>PS D:\test\my-webpack\3-3&gt; webpack
+Hash: c51e1f6c979a6f1f782b
+Version: webpack 3.10.0
+Time: 565ms
+       Asset     Size  Chunks             Chunk Names
+app.c51e1.js  2.68 kB       0  [emitted]  app
+   [0] ./app.js 186 bytes {0} [built]
+</code></pre></div></li> <li><p>但是此时我们观察一下打包好的文件，发现有些还是没有转换。只能针对语法进行了转换，而针对低版本浏览器没有的函数和方法是没有转换的，所以还需要两个插件。</p> <ul><li><p><code>Babel Polyfill</code><br>
+全局垫片，引入之后会在全局进行变量定义，可以理解为会污染全局变量。为开发应用准备的插件。<br>
+使用方法：<br> <code>npm install @babel/polyfill --save</code></p></li> <li><p><code>Babel Runtime Transform</code><br>
+局部垫片，为了开发框架而准备的，不会污染全局。<br>
+使用方法：<br> <code>npm install @babel/plugin-transform-runtime --save-dev</code></p> <p><code>npm install @babel/runtime --save</code></p></li></ul></li> <li><p>这里把上述的插件都安装上</p> <p><code>npm install @babel/polyfill @babel/runtime --save</code></p> <p><code>npm install @babel/plugin-transform-runtime --save-dev</code></p></li> <li><p>使用 <code>@babel/polyfill</code> 时，在 <code>app.js</code> (入口文件)中 <code>import @babel/polyfill</code>
+这时再打包文件，会发现文件非常大，那我们使用一下 <code>@babel/runtime</code></p></li> <li><p>使用 <code>@babel/runtime</code> 时，在根目录 新建 <code>.babelrc</code> 文件 用来配置。</p> <ul><li>把 <code>webapck.config.js</code>文件 <code>module</code> 中的 <code>presets</code> 移动到 <code>.babelrc</code> 文件中。
+再增加一个 <code>plugins</code> , 把刚刚安装的 <code>@babel/plugin-transform-runtime</code> 配置上。</li></ul> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;presets&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">[</span>
+      <span class="token string">&quot;@babel/preset-env&quot;</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;targets&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;browsers&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;&gt; 1%&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;last 2 versions&quot;</span><span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;plugins&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;@babel/plugin-transform-runtime&quot;</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li><p>运行 <code>webpack</code> 打包成功</p> <div class="language-shell extra-class"><pre class="language-text"><code> PS D:\test\my-webpack\3-3&gt; webpack
+ Hash: 04b45de1843b1e27155f
+ Version: webpack 3.10.0
+ Time: 1627ms
+        Asset     Size  Chunks             Chunk Names
+ app.04b45.js  73.2 kB       0  [emitted]  app
+   [60] ./app.js 386 bytes {0} [built]
+     + 121 hidden modules
+</code></pre></div><p>查看新编译的文件，找到自己写的代码，发现已经全部被转换了。</p></li></ul> <blockquote><p>一般在应用开发中，我们只需要使用 <code>Babel Polyfilll</code> 在入口文件中 <code>import 'babel-polyfill'</code> 就可以使用 ES6 这些新语法了。在开发框架之类的，需要给其他人用的，就需要使用 <code>Babel Runtime Transform</code></p></blockquote></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/webpack/3_2_打包js/打包js.html" class="prev">
+          webpack 起步 - 打包 JS 文件
+        </a></span> <span class="next"><a href="/webpack/3-4-TypeScript配置/Typescript配置.html">
+          TypeScript 配置
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.f8335c6e.js" defer></script><script src="/assets/js/2.27e84395.js" defer></script><script src="/assets/js/30.82bf993e.js" defer></script><script src="/assets/js/3.58d7ffb3.js" defer></script>
+  </body>
+</html>
