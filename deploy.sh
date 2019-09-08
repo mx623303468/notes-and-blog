@@ -15,7 +15,9 @@ ylovey.top
 www.ylovey.top
 EOF
 
-git init
+cd ../../../
+
+# git init
 git add -A
 git commit -m 'deploy'
 
