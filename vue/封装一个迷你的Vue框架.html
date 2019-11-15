@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>实现 VUE | YinXiaobo 的笔记</title>
+    <meta name="description" content="">
+    <link rel="icon" type="image/x-icon" href="/notes-and-blog/favicon.jpg">
+    
+    <link rel="preload" href="/notes-and-blog/assets/css/0.styles.85d49211.css" as="style"><link rel="preload" href="/notes-and-blog/assets/js/app.524688e6.js" as="script"><link rel="preload" href="/notes-and-blog/assets/js/2.a69d6162.js" as="script"><link rel="preload" href="/notes-and-blog/assets/js/22.23816db2.js" as="script"><link rel="preload" href="/notes-and-blog/assets/js/3.58d7ffb3.js" as="script"><link rel="prefetch" href="/notes-and-blog/assets/js/10.faf4eb75.js"><link rel="prefetch" href="/notes-and-blog/assets/js/11.cb4ae0cd.js"><link rel="prefetch" href="/notes-and-blog/assets/js/12.a53445ec.js"><link rel="prefetch" href="/notes-and-blog/assets/js/13.9fd8806b.js"><link rel="prefetch" href="/notes-and-blog/assets/js/14.31f45212.js"><link rel="prefetch" href="/notes-and-blog/assets/js/15.c20be913.js"><link rel="prefetch" href="/notes-and-blog/assets/js/16.8caeba78.js"><link rel="prefetch" href="/notes-and-blog/assets/js/17.6a8178b5.js"><link rel="prefetch" href="/notes-and-blog/assets/js/18.1edbd838.js"><link rel="prefetch" href="/notes-and-blog/assets/js/19.be73989b.js"><link rel="prefetch" href="/notes-and-blog/assets/js/20.f65907ed.js"><link rel="prefetch" href="/notes-and-blog/assets/js/21.d2c4d574.js"><link rel="prefetch" href="/notes-and-blog/assets/js/23.034bb270.js"><link rel="prefetch" href="/notes-and-blog/assets/js/24.0c2df017.js"><link rel="prefetch" href="/notes-and-blog/assets/js/25.85356f51.js"><link rel="prefetch" href="/notes-and-blog/assets/js/26.0da2b7a7.js"><link rel="prefetch" href="/notes-and-blog/assets/js/27.5663e23b.js"><link rel="prefetch" href="/notes-and-blog/assets/js/28.fc5ee29d.js"><link rel="prefetch" href="/notes-and-blog/assets/js/29.c9dbd1c6.js"><link rel="prefetch" href="/notes-and-blog/assets/js/30.45364af1.js"><link rel="prefetch" href="/notes-and-blog/assets/js/31.4e273d49.js"><link rel="prefetch" href="/notes-and-blog/assets/js/32.0ba33a57.js"><link rel="prefetch" href="/notes-and-blog/assets/js/33.e7d18a0f.js"><link rel="prefetch" href="/notes-and-blog/assets/js/34.cd78a2cc.js"><link rel="prefetch" href="/notes-and-blog/assets/js/4.3e8788b9.js"><link rel="prefetch" href="/notes-and-blog/assets/js/5.77584635.js"><link rel="prefetch" href="/notes-and-blog/assets/js/6.cf9fd16b.js"><link rel="prefetch" href="/notes-and-blog/assets/js/7.8a4d27b3.js"><link rel="prefetch" href="/notes-and-blog/assets/js/8.0cf6aafe.js"><link rel="prefetch" href="/notes-and-blog/assets/js/9.b6542da3.js">
+    <link rel="stylesheet" href="/notes-and-blog/assets/css/0.styles.85d49211.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/notes-and-blog/" class="home-link router-link-active"><!----> <span class="site-name">YinXiaobo 的笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Notes</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>基础</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/notes-and-blog/js/" class="nav-link">JavaScript</a></li><li class="dropdown-subitem"><a href="/notes-and-blog/html/" class="nav-link">HTML</a></li><li class="dropdown-subitem"><a href="/notes-and-blog/css/" class="nav-link">CSS</a></li></ul></li><li class="dropdown-item"><h4>构建工具</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/notes-and-blog/webpack/" class="nav-link">Webpack</a></li></ul></li><li class="dropdown-item"><h4>框架</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/notes-and-blog/vue/" class="nav-link router-link-active">Vue</a></li><li class="dropdown-subitem"><a href="/notes-and-blog/react/" class="nav-link">React</a></li></ul></li><li class="dropdown-item"><h4>综合</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/notes-and-blog/sundry/" class="nav-link">杂项</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/notes-and-blog/good-article/" class="nav-link">好文收藏</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">一些项目</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/notes-and-blog/music.html" class="nav-link">music</a></li><li class="dropdown-item"><!----> <a href="/notes-and-blog/pro.html" class="nav-link">PRO</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Notes</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>基础</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/notes-and-blog/js/" class="nav-link">JavaScript</a></li><li class="dropdown-subitem"><a href="/notes-and-blog/html/" class="nav-link">HTML</a></li><li class="dropdown-subitem"><a href="/notes-and-blog/css/" class="nav-link">CSS</a></li></ul></li><li class="dropdown-item"><h4>构建工具</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/notes-and-blog/webpack/" class="nav-link">Webpack</a></li></ul></li><li class="dropdown-item"><h4>框架</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/notes-and-blog/vue/" class="nav-link router-link-active">Vue</a></li><li class="dropdown-subitem"><a href="/notes-and-blog/react/" class="nav-link">React</a></li></ul></li><li class="dropdown-item"><h4>综合</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/notes-and-blog/sundry/" class="nav-link">杂项</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/notes-and-blog/good-article/" class="nav-link">好文收藏</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">一些项目</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/notes-and-blog/music.html" class="nav-link">music</a></li><li class="dropdown-item"><!----> <a href="/notes-and-blog/pro.html" class="nav-link">PRO</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/notes-and-blog/vue/" class="sidebar-link">Vue</a></li><li><a href="/notes-and-blog/vue/vue-cli.html" class="sidebar-link">Vue-cli 使用入门</a></li><li><a href="/notes-and-blog/vue/封装一个迷你的Vue框架.html" class="active sidebar-link">实现 VUE</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/notes-and-blog/vue/封装一个迷你的Vue框架.html#mvvm-框架是什么？" class="sidebar-link">MVVM 框架是什么？</a></li><li class="sidebar-sub-header"><a href="/notes-and-blog/vue/封装一个迷你的Vue框架.html#双向数据绑定的几种方式" class="sidebar-link">双向数据绑定的几种方式</a></li><li class="sidebar-sub-header"><a href="/notes-and-blog/vue/封装一个迷你的Vue框架.html#封装迷你版的-vue" class="sidebar-link">封装迷你版的 Vue</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="实现-vue"><a href="#实现-vue" aria-hidden="true" class="header-anchor">#</a> 实现 VUE</h1> <blockquote><p>实现 vue 的部分核心功能</p></blockquote> <h2 id="mvvm-框架是什么？"><a href="#mvvm-框架是什么？" aria-hidden="true" class="header-anchor">#</a> MVVM 框架是什么？</h2> <ul><li>M （Model，模型层）</li> <li>V（View，试图层）</li> <li>VM（ViewModel，视图模型，V 与 M 连接的桥梁）</li></ul> <ul><li>MVVM 框架主要是实现了数据的双向绑定
+<ul><li>当 M 层数据进行修改时，VM 层会监测到变化，并且通知 V 层进行相应的修改</li> <li>修改 V 层，则会通知 M 层进行数据修改</li> <li>MVVM 框架的实现了视图与模型层的相互解耦</li></ul></li></ul> <h2 id="双向数据绑定的几种方式"><a href="#双向数据绑定的几种方式" aria-hidden="true" class="header-anchor">#</a> 双向数据绑定的几种方式</h2> <ul><li><p>发布 - 订阅者模式</p> <ul><li>一般通过 pub、sub 的方式实现数据和视图的绑定，但是使用起来比较麻烦。</li></ul></li> <li><p>脏值检查</p> <ul><li>angular.js 1.x 是通过脏值检测的方式对比数据是否有变更，来决定是否更新视图。类似于通过定时器轮询的方式检测数据改变。</li></ul></li> <li><p>数据劫持</p> <ul><li><p>vue.js 则是采用数据劫持结合发布订阅模式的方式。通过 <code>Object.defineProperty()</code> 来劫持各个属性的 <code>setter</code> ，<code>getter</code> 。在数据变动时发布消息给订阅者，触发相应的监听回调。</p> <p><em>vuej.js 不兼容 IE8 以下的版本</em></p></li></ul></li></ul> <h2 id="封装迷你版的-vue"><a href="#封装迷你版的-vue" aria-hidden="true" class="header-anchor">#</a> 封装迷你版的 Vue</h2> <ul><li><p>创建一个 <code>miniVue</code> 文件夹，作为项目根目录。</p></li> <li><p>根目录下创建 <code>src</code> 目录以及 <code>index.html</code>。</p></li> <li><p>在 <code>src</code> 目录下创建一个 <code>vue.js</code></p></li> <li><p>此时，回想一下创建 vue 的实例，需要一个传入一个挂载点 <code>el</code> ，一个数据体 <code>data</code>，基于此，我们在 <code>vue.js</code> 中创建一个 vue 的构造函数，并传入指定的参数。</p> <div class="language-js extra-class"><pre class="language-js"><code># vue<span class="token punctuation">.</span>js
+<span class="token comment">/* 定义一个类，用于创建 vue 的实例 */</span>
+<span class="token keyword">class</span> <span class="token class-name">Vue</span> <span class="token punctuation">{</span>
+  <span class="token comment">// options 默认是一个空对象，防止没有传参报错</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">options <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 给vue实例增加属性</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>$el <span class="token operator">=</span> options<span class="token punctuation">.</span>el
+    <span class="token keyword">this</span><span class="token punctuation">.</span>$data <span class="token operator">=</span> options<span class="token punctuation">.</span>data
+
+    <span class="token comment">// 如果有el 则进行解析</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>$el<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 实例化 Compile 解析模板，传入挂载点和vue实例</span>
+      <span class="token keyword">new</span> <span class="token class-name">Compile</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>$el<span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li><p>创建一个 <code>compile.js</code> 文件，创建 <code>Compile</code> 类，用来专门解析模板内容</p> <div class="language-js extra-class"><pre class="language-js"><code># compile<span class="token punctuation">.</span>js
+
+<span class="token keyword">class</span> <span class="token class-name">Complie</span> <span class="token punctuation">{</span>
+  <span class="token comment">// el：模板</span>
+  <span class="token comment">// vm: vue实例</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">el<span class="token punctuation">,</span> vm</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>el <span class="token operator">=</span> typeOf el <span class="token operator">===</span> <span class="token string">'string'</span> <span class="token operator">?</span> document<span class="token punctuation">.</span><span class="token function">queryselector</span><span class="token punctuation">(</span>el<span class="token punctuation">)</span> <span class="token punctuation">:</span> el
+    <span class="token keyword">this</span><span class="token punctuation">.</span>vm <span class="token operator">=</span> vm
+
+    <span class="token comment">// 编译模板</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>el<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 1. 把el中的所有子节点都放入到内存中， fragment</span>
+      <span class="token keyword">let</span> fragment <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">nodeToFragment</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>el<span class="token punctuation">)</span>
+      <span class="token comment">// 2. 在内存中编译 fragment</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">compile</span><span class="token punctuation">(</span>fragment<span class="token punctuation">)</span>
+      <span class="token comment">// 3. 把 fragment 一次性的添加到页面</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>el<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>fragment<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">/* 核心方法 */</span>
+
+  <span class="token comment">/**
+  * 添加节点到文档碎片中
+  * @param
+  */</span>
+  <span class="token function">nodeToFragment</span><span class="token punctuation">(</span><span class="token parameter">node</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 创建一个 fragment</span>
+    <span class="token keyword">let</span> fragment <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createDocumentFragment</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token comment">// 把el中所有的子节点挨个添加到文档碎片中</span>
+    <span class="token keyword">let</span> childNodes <span class="token operator">=</span> node<span class="token punctuation">.</span>childNodes <span class="token comment">// 获得el下的 NodeList</span>
+    <span class="token comment">// 调用工具方法转换为数组，并遍历新数组，同时把所有的子节点添加到文档碎片中</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">toArray</span><span class="token punctuation">(</span>childNodes<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">node</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      fragment<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> fragment
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">/**
+  * 在内存中编译文档碎片
+  * @param {*} fragment
+  */</span>
+  <span class="token function">compile</span><span class="token punctuation">(</span><span class="token parameter">fragment</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> childNodes <span class="token operator">=</span> fragment<span class="token punctuation">.</span>childNodes
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">toArray</span><span class="token punctuation">(</span>childNodes<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">node</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 编译子节点</span>
+      <span class="token comment">// 如果是元素，需要解析指令</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">isElementNode</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">compileElement</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+      <span class="token comment">// 如果是文本节点，需要解析插值表达式</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">isTextNode</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">compileText</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+      <span class="token comment">// 如果此节点还有子节点，就需要递归解析</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>node<span class="token punctuation">.</span>childNodes <span class="token operator">&amp;&amp;</span> node<span class="token punctuation">.</span>childNodes<span class="token punctuation">.</span>length <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">compile</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">/**
+  * 解析HTML标签
+  *
+  */</span>
+  <span class="token function">compileElement</span><span class="token punctuation">(</span><span class="token parameter">node</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 1. 获取当前节点的所有属性</span>
+    <span class="token keyword">let</span> attributes <span class="token operator">=</span> node<span class="token punctuation">.</span>attributes
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">toArray</span><span class="token punctuation">(</span>attributes<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">attr</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 2. 解析vue指令，所有 v- 开头的属性</span>
+      <span class="token keyword">let</span> attrName <span class="token operator">=</span> attr<span class="token punctuation">.</span>name
+      <span class="token comment">// 如果是一个指令</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">isDirective</span><span class="token punctuation">(</span>attrName<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> attrValue <span class="token operator">=</span> attr<span class="token punctuation">.</span>value
+        <span class="token keyword">let</span> type <span class="token operator">=</span> attrName<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+
+        <span class="token comment">// 如果是 text</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>type <span class="token operator">===</span> <span class="token string">'text'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          node<span class="token punctuation">.</span>textContent <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>vm<span class="token punctuation">.</span>$data<span class="token punctuation">[</span>attrValue<span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">// 如果是 html</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>type <span class="token operator">===</span> <span class="token string">'html'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          node<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>vm<span class="token punctuation">.</span>$data<span class="token punctuation">[</span>attrValue<span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">/**
+  * 解析文本节点
+  */</span>
+  <span class="token function">compileText</span><span class="token punctuation">(</span><span class="token parameter">node</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+  <span class="token comment">/* 工具方法 */</span>
+
+  <span class="token comment">/**
+  * 转换为数组
+  */</span>
+  <span class="token function">toArray</span><span class="token punctuation">(</span><span class="token parameter">likeArray</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>likeArray<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">/**
+  * 是否是元素节点
+  *
+  */</span>
+  <span class="token function">isElementNode</span><span class="token punctuation">(</span><span class="token parameter">node</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// nodeType: 节点的类型 1：元素节点   3：文本节点</span>
+    <span class="token keyword">return</span> node<span class="token punctuation">.</span>nodeType <span class="token operator">===</span> <span class="token number">1</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">/**
+  * 是否是文本节点
+  *
+  */</span>
+  <span class="token function">isTextNode</span><span class="token punctuation">(</span><span class="token parameter">node</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// nodeType: 节点的类型 1：元素节点   3：文本节点</span>
+    <span class="token keyword">return</span> node<span class="token punctuation">.</span>nodeType <span class="token operator">===</span> <span class="token number">3</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">/**
+  * 是否是指令
+  */</span>
+  <span class="token function">isDirective</span><span class="token punctuation">(</span><span class="token parameter">attrName</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> attrName<span class="token punctuation">.</span><span class="token function">startsWith</span><span class="token punctuation">(</span><span class="token string">'v-'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/notes-and-blog/vue/vue-cli.html" class="prev">
+          Vue-cli 使用入门
+        </a></span> <!----></p></div> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/notes-and-blog/assets/js/app.524688e6.js" defer></script><script src="/notes-and-blog/assets/js/2.a69d6162.js" defer></script><script src="/notes-and-blog/assets/js/22.23816db2.js" defer></script><script src="/notes-and-blog/assets/js/3.58d7ffb3.js" defer></script>
+  </body>
+</html>
