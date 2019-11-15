@@ -28,6 +28,7 @@ module.exports = {
   extend: "@vuepress/theme-default",
   title: "YinXiaobo 的笔记",
   description: "",
+  base: "/notes-and-blog/",
   host: getNetworkIp(),
   head: [
     [
